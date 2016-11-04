@@ -1,6 +1,5 @@
 * {
   max-width: 100%;
-  overflow-x: hidden;
   margin: 0;
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
@@ -190,6 +189,8 @@ p {
   text-align: center; }
   .about p {
     font: 1em; }
+  .about .container-item {
+    width: 244px; }
 
 .container {
   display: flex;
@@ -198,11 +199,12 @@ p {
   min-height: 354px; }
   .container p {
     margin: auto;
-    width: 80%; }
+    width: 253px; }
 
 .container-item {
-  width: 350px;
-  margin: 20px; }
+  width: 413px;
+  margin: 20px;
+  padding-bottom: 30px; }
 
 .blog {
   display: flex; }
@@ -285,19 +287,20 @@ p {
 .portfolio-container {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   flex-flow: column wrap-reverse; }
   .portfolio-container p {
-    text-align: center; }
+    text-align: center;
+    margin: 0 auto; }
 
 .portfolio-row {
   display: flex;
   align-items: center;
-  flex-flow: column wrap-reverse;
+  flex-flow: column wrap;
   margin: 0 auto;
   width: 600px;
   height: 160px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top: 20px; }
   .portfolio-row h4 {
     padding: 9px 0 9px 0;
     text-transform: none; }
@@ -308,8 +311,6 @@ p {
   width: 100%;
   text-align: center;
   background-color: #f9f9f9; }
-  .culture p {
-    font: 1em; }
 
 .client h3 {
   padding-top: 1em; }
@@ -511,7 +512,9 @@ p {
     padding-right: 10%; }
   .portfolio-container p {
     display: block;
-    width: 377px; } }
+    width: 377px; }
+  .contact {
+    height: 250px; } }
 
 @media screen and (min-width: 621px) {
   .footer-container {
@@ -533,11 +536,12 @@ p {
     .portfolio-container p {
       display: block;
       width: 377px;
-      text-align: left; }
+      text-align: left;
+      margin: 0; }
   .portfolio-row {
-    align-items: flex-end;
+    align-items: flex-start;
     height: 77px;
-    align-content: flex-end;
+    align-content: flex-start;
     justify-content: flex-start; }
     .portfolio-row img {
       padding-right: 20px; } }
@@ -552,8 +556,6 @@ p {
     width: 70%; }
     .blog .right-column button {
       margin-left: 0; }
-  .contact {
-    height: 250px; }
   .menu {
     position: relative; }
     .menu li {
@@ -565,9 +567,8 @@ p {
       margin-left: 0;
       display: inline-flex;
       flex-wrap: row nowrap;
-      width: 50%; }
+      width: 55%; }
     .menu ul {
-      position: absolute;
       display: inline-block;
       bottom: 8px; }
     .menu .nav-logo {
@@ -599,7 +600,19 @@ p {
       text-decoration: none;
       color: #aaaaaa; }
   .blog .right-column h2 {
-    font-size: 2em; } }
+    font-size: 2em; }
+  .culture .container .container-item {
+    width: 260px; }
+    .culture .container .container-item:nth-child(-n+2)::after {
+      position: relative;
+      bottom: 230px;
+      left: 150px;
+      display: inline-block;
+      content: "";
+      height: 3px;
+      width: 50%;
+      background-color: #777;
+      border-radius: 5px; } }
 
 @media screen and (min-width: 990px) {
   .menu .letter-green,

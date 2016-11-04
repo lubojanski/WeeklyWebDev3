@@ -1,7 +1,7 @@
 $green: #7cc576;
 * {
     max-width: 100%;
-    overflow-x: hidden;
+    //overflow-x: hidden;
     margin: 0;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
@@ -138,6 +138,7 @@ p {
     outline: 0;
 }
 
+
 .btn:hover {
     @extend .btn-reversed;
     transition: .5s;
@@ -219,7 +220,10 @@ p {
     p {
         font: 1em;
     }
-}
+    .container-item{
+        width: 244px;
+    }
+} 
 
 .container {
     display: flex;
@@ -228,13 +232,14 @@ p {
     min-height: 354px;
     p {
         margin: auto;
-        width: 80%;
+        width: 253px;
     }
 }
 
 .container-item {
-    width: 350px;
+    width: 413px;
     margin: 20px;
+    padding-bottom: 30px;
 }
 
 .blog {
@@ -335,21 +340,23 @@ p {
 .portfolio-container {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+   // align-items: flex-start;
     flex-flow: column wrap-reverse;
     p {
         text-align: center;
+        margin: 0 auto;
     }
 }
 
 .portfolio-row {
     display: flex;
     align-items: center;
-    flex-flow: column wrap-reverse;
+    flex-flow: column wrap;
     margin: 0 auto;
     width: 600px;
     height: 160px;
     margin-bottom: 20px;
+    margin-top: 20px;
     h4 {
         padding: 9px 0 9px 0;
         text-transform: none;
@@ -363,10 +370,10 @@ p {
     width: 100%;
     text-align: center;
     background-color: #f9f9f9;
-    p {
-        font: 1em;
+
+
     }
-}
+
 
 .client {
     h3 {
@@ -615,6 +622,9 @@ p {
         display: block;
         width: 377px;
     }
+        .contact {
+        height: 250px;
+    }
 }
 
 @media screen and ( min-width: 621px) {
@@ -642,12 +652,13 @@ p {
             display: block;
             width: 377px;
             text-align: left;
+            margin: 0;
         }
     }
     .portfolio-row {
-        align-items: flex-end;
+        align-items: flex-start;
         height: 77px;
-        align-content: flex-end;
+        align-content: flex-start;
         justify-content: flex-start;
         img {
             padding-right: 20px;
@@ -670,9 +681,7 @@ p {
             }
         }
     }
-    .contact {
-        height: 250px;
-    }
+
     .menu {
         position: relative;
         li {
@@ -685,10 +694,10 @@ p {
             margin-left: 0;
             display: inline-flex;
             flex-wrap: row nowrap;
-            width: 50%;
+            width: 55%;
         }
         ul {
-            position: absolute;
+           // position: absolute;
             display: inline-block;
             bottom: 8px;
         }
@@ -735,6 +744,20 @@ p {
         h2 {
             font-size: 2em;
         }
+    }
+    .culture .container .container-item{
+       width: 260px;
+       &:nth-child(-n+2)::after {
+    position: relative;
+    bottom: 230px;
+    left: 150px;
+    display: inline-block;
+    content: "";
+    height: 3px;
+    width: 50%;
+    background-color: #777;
+    border-radius: 5px;
+    }
     }
 }
 
