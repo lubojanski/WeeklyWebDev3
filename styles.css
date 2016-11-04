@@ -16,7 +16,7 @@
   justify-content: space-around;
   z-index: 999; }
   .menu a {
-    color: #aaaaaa;
+    color: #cccccc;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     text-align: center;
@@ -57,7 +57,7 @@
     width: 100%;
     list-style-type: none;
     background-color: white;
-    color: #aaaaaa;
+    color: #cccccc;
     font: 1em; }
 
 .menu-up {
@@ -141,11 +141,9 @@ p {
 .btn-details {
   font-weight: 600;
   font-size: 1em;
-  margin: 0;
   text-align: left;
   height: auto;
-  margin-top: 3.5em;
-  margin-bottom: 3.5em;
+  margin: 0.5em auto 3.5em auto;
   width: 165px; }
 
 .btn-details:hover {
@@ -181,7 +179,7 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   -moz-transition: all .2s linear;
   -webkit-transition: all .2s linear;
   -ms-transition: all .2s linear;
@@ -259,7 +257,7 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
     -moz-transition: all .2s linear;
     -webkit-transition: all .2s linear;
     -ms-transition: all .2s linear;
@@ -301,8 +299,7 @@ p {
   margin-bottom: 20px;
   margin-top: 20px; }
   .portfolio-row .portfolio-row-h4 {
-    padding: 9px 0 9px 0;
-    text-transform: none; }
+    padding: 9px 0 9px 0; }
   .portfolio-row .portfolio-row-h3 {
     padding: 0; }
 
@@ -310,6 +307,11 @@ p {
   width: 100%;
   text-align: center;
   background-color: #f9f9f9; }
+  .culture img {
+    border: 3px;
+    border-style: solid;
+    border-radius: 100%;
+    border-color: #777777; }
 
 .client .client-h3 {
   padding-top: 1em; }
@@ -519,6 +521,8 @@ p {
     justify-content: center; } }
 
 @media screen and (min-width: 740px) {
+  .btn-details {
+    margin: 0.5em auto 3.5em 0; }
   .swap-order {
     order: 1; }
   .portfolio {
@@ -531,7 +535,7 @@ p {
     flex-flow: column wrap-reverse; }
     .portfolio-container p {
       display: block;
-      width: 377px;
+      width: 451px;
       text-align: left;
       margin: 0; }
   .portfolio-row {
@@ -553,6 +557,7 @@ p {
     .blog .right-column button {
       margin-left: 0; }
   .menu {
+    min-height: 100px;
     position: relative; }
     .menu li {
       display: inline-block;
@@ -596,7 +601,7 @@ p {
       padding-left: 11px; }
     .menu a {
       text-decoration: none;
-      color: #aaaaaa; }
+      color: #cccccc; }
   .blog .right-column .blog-h2 {
     font-size: 2em; }
   .culture .container .container-item {
