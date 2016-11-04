@@ -60,6 +60,9 @@
     color: #aaaaaa;
     font: 1em; }
 
+.menu-up {
+  top: -56px; }
+
 .hamburger {
   box-sizing: border-box;
   background: url("images/hamburger.ico") right center no-repeat;
@@ -70,20 +73,20 @@
   width: 43px;
   cursor: pointer; }
 
-h1 {
+h1, .home .home-h1 {
   font-size: 3em;
   text-align: center;
   padding-top: 2em;
   width: 685px;
   margin: auto; }
 
-h2 {
+h2, .blog .blog-h2, .contact .contact-h2 {
   font-size: 1.5em;
   text-align: center;
   padding-top: 2em;
   margin: auto; }
 
-h3 {
+h3, .home .home-h3, .blog .blog-h3, .portfolio .portfolio-h3, .portfolio-row .portfolio-row-h3, .client .client-h3 {
   color: #cccccc;
   font: 400 1em 'Roboto Slab', serif;
   text-align: center;
@@ -91,7 +94,7 @@ h3 {
   padding-top: 1em;
   padding-bottom: 2em; }
 
-h4 {
+h4, .portfolio-row .portfolio-row-h4, .footer-item .footer-item-h4 {
   color: #222222;
   font-size: 1em;
   text-align: center;
@@ -160,10 +163,13 @@ p {
   color: white; }
   .home button {
     margin: 4em auto 4em auto;
-    display: block; }
-  .home button,
-  .home h1,
-  .home h3 {
+    display: block;
+    z-index: 1;
+    position: relative; }
+  .home .home-h1 {
+    z-index: 1;
+    position: relative; }
+  .home .home-h3 {
     z-index: 1;
     position: relative; }
 
@@ -208,6 +214,21 @@ p {
 
 .blog {
   display: flex; }
+  .blog .blog-h2 {
+    position: relative;
+    font-size: 1.3em;
+    color: #ffffff;
+    line-height: 150%;
+    padding-bottom: 45px;
+    text-align: left;
+    z-index: 1; }
+  .blog .blog-h3 {
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    font-size: 0.85714em;
+    text-align: left;
+    z-index: 1; }
   .blog .left-column {
     display: none;
     width: 30%;
@@ -222,28 +243,6 @@ p {
     background: url(images/bg-right-slide.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover; }
-    .blog .right-column h2 {
-      position: relative;
-      font-size: 1.3em;
-      color: #ffffff;
-      line-height: 150%;
-      padding-bottom: 45px;
-      text-align: left;
-      z-index: 1; }
-    .blog .right-column h3 {
-      position: relative;
-      padding-top: 0px;
-      padding-bottom: 20px;
-      font-size: 0.85714em;
-      text-align: left;
-      z-index: 1; }
-    .blog .right-column h4 {
-      position: relative;
-      color: #222222;
-      font-size: 1em;
-      text-align: center;
-      padding-top: 2em;
-      z-index: 1; }
     .blog .right-column button {
       position: relative;
       margin-top: 4em;
@@ -280,7 +279,7 @@ p {
   background: url(images/icon-check.png) left no-repeat;
   z-index: 1; }
 
-.portfolio > h3 {
+.portfolio .portfolio-h3 {
   font-size: 1.15em;
   padding-top: 0px; }
 
@@ -301,10 +300,10 @@ p {
   height: 160px;
   margin-bottom: 20px;
   margin-top: 20px; }
-  .portfolio-row h4 {
+  .portfolio-row .portfolio-row-h4 {
     padding: 9px 0 9px 0;
     text-transform: none; }
-  .portfolio-row h3 {
+  .portfolio-row .portfolio-row-h3 {
     padding: 0; }
 
 .culture {
@@ -312,7 +311,7 @@ p {
   text-align: center;
   background-color: #f9f9f9; }
 
-.client h3 {
+.client .client-h3 {
   padding-top: 1em; }
 
 .client-container {
@@ -367,7 +366,7 @@ p {
   width: 100%;
   background: #7cc576;
   color: white; }
-  .contact h2 {
+  .contact .contact-h2 {
     padding-top: 1em; }
 
 .inner {
@@ -393,14 +392,14 @@ p {
   padding-left: 20px;
   display: flex;
   flex-flow: row wrap; }
-  .footer-container h4 {
+
+.footer-item {
+  margin: 25px; }
+  .footer-item .footer-item-h4 {
     color: inherit;
     text-align: left;
     margin-bottom: 20px;
     padding-top: 0; }
-
-.footer-item {
-  margin: 25px; }
 
 .footer-row {
   width: 350px; }
@@ -422,9 +421,6 @@ p {
   text-transform: none; }
   .footer-item a:hover {
     color: gray; }
-
-.menu-up {
-  top: -56px; }
 
 .hashtag {
   padding-top: 3px;
@@ -505,7 +501,7 @@ p {
   background-color: #D34836; }
 
 @media screen and (min-width: 425px) {
-  h2 {
+  h2, .blog .blog-h2, .contact .contact-h2 {
     font-size: 2em; }
   .footer-container {
     padding-left: 10%;
@@ -585,6 +581,8 @@ p {
 @media screen and (min-width: 900px) {
   * {
     font-size: 18px; }
+  .portfolio {
+    background-position-y: 356px; }
   .portfolio-container {
     padding-left: 17%; }
   .portfolio-rows-container {
@@ -599,7 +597,7 @@ p {
     .menu a {
       text-decoration: none;
       color: #aaaaaa; }
-  .blog .right-column h2 {
+  .blog .right-column .blog-h2 {
     font-size: 2em; }
   .culture .container .container-item {
     width: 260px; }
@@ -615,15 +613,11 @@ p {
       border-radius: 5px; } }
 
 @media screen and (min-width: 990px) {
-  .menu .letter-green,
-  .menu .nav-logo {
+  .menu .letter-green, .menu .nav-logo {
     float: left; } }
 
 @media screen and (min-width: 1440px) {
   .portfolio {
     background: url(images/bg-tablet-right.png) right center no-repeat; }
-    .portfolio h4,
-    .portfolio p,
-    .portfolio button,
-    .portfolio .portfolio-row h3 {
+    .portfolio h4, .portfolio .portfolio-row .portfolio-row-h4, .portfolio-row .portfolio .portfolio-row-h4, .portfolio .footer-item .footer-item-h4, .footer-item .portfolio .footer-item-h4, .portfolio p, .portfolio button, .portfolio .portfolio-row h3, .portfolio .portfolio-row .home .home-h3, .home .portfolio .portfolio-row .home-h3, .portfolio .portfolio-row .blog .blog-h3, .blog .portfolio .portfolio-row .blog-h3, .portfolio .portfolio-row .portfolio-h3, .portfolio .portfolio-row .portfolio-row-h3, .portfolio .portfolio-row .client .client-h3, .client .portfolio .portfolio-row .client-h3 {
       text-align: left; } }
