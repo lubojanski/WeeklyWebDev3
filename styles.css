@@ -21,9 +21,6 @@
     text-decoration: none;
     text-align: center;
     -webkit-tap-highlight-color: transparent; }
-  .menu a:active {
-    color: #222222;
-    transition: .3s; }
   .menu .nav-logo {
     position: relative;
     box-sizing: border-box;
@@ -37,9 +34,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%); }
-      .menu .nav-logo a:hover {
-        color: #7cc576;
-        transition: .5s; }
   .menu li {
     display: block;
     height: auto;
@@ -57,11 +51,7 @@
     width: 100%;
     list-style-type: none;
     background-color: white;
-    color: #cccccc;
-    font: 1em; }
-
-.menu-up {
-  top: -56px; }
+    color: #cccccc; }
 
 .hamburger {
   box-sizing: border-box;
@@ -122,9 +112,6 @@ p {
   margin: auto;
   outline: 0; }
 
-.btn:hover {
-  transition: .5s; }
-
 .btn-contact {
   margin-top: 2em;
   margin-bottom: 2em;
@@ -134,7 +121,7 @@ p {
   text-align: center;
   color: white; }
 
-.btn-reversed, .btn:hover {
+.btn-reversed {
   color: #7cc576;
   background-color: white; }
 
@@ -145,10 +132,6 @@ p {
   height: auto;
   margin: 0.5em auto 3.5em auto;
   width: 165px; }
-
-.btn-details:hover {
-  transition: 0.5s;
-  color: lightgreen; }
 
 .home {
   position: relative;
@@ -403,9 +386,6 @@ p {
     margin-bottom: 20px;
     padding-top: 0; }
 
-.footer-row {
-  width: 350px; }
-
 .footer-item-row {
   display: block;
   text-transform: none;
@@ -421,8 +401,6 @@ p {
   font: 400 14px 'Roboto Slab', serif;
   color: #ececec;
   text-transform: none; }
-  .footer-item a:hover {
-    color: gray; }
 
 .hashtag {
   padding-top: 3px;
@@ -457,15 +435,6 @@ p {
 .twitter-icon {
   background: url(images/footer-twitter-ico.png) left top no-repeat; }
 
-.basket-icon {
-  background: url(images/basket-icon.png) bottom 20px center no-repeat; }
-
-.secure-icon {
-  background: url(images/secure-icon.png) bottom 20px center no-repeat; }
-
-.laptop-icon {
-  background: url(images/laptop-icon.png) bottom 20px center no-repeat; }
-
 .copyright-adds {
   display: flex;
   flex-flow: row wrap;
@@ -489,18 +458,6 @@ p {
     background-color: #222222;
     border-radius: 100%;
     padding: 5px; }
-
-.facebook-blue:hover {
-  background-color: #3b5998; }
-
-.twitter-blue:hover {
-  background-color: #4099ff; }
-
-.pinterest-red:hover {
-  background-color: #c92228; }
-
-.gplus-red:hover {
-  background-color: #D34836; }
 
 @media screen and (min-width: 425px) {
   h2, .blog .blog-h2, .contact .contact-h2 {
@@ -565,9 +522,9 @@ p {
       padding-left: 15px; }
     .menu .collapse {
       display: inline-block;
-      margin-left: 0;
+      margin-left: auto;
       display: inline-flex;
-      flex-wrap: row nowrap;
+      flex-wrap: nowrap;
       width: 55%; }
     .menu ul {
       display: inline-block;
@@ -577,9 +534,6 @@ p {
       display: inline-block;
       padding-left: auto;
       text-align: left; }
-    .menu a:hover {
-      color: #222222;
-      transition: .3s; }
   .hamburger {
     display: none; } }
 
@@ -618,11 +572,47 @@ p {
       border-radius: 5px; } }
 
 @media screen and (min-width: 990px) {
-  .menu .letter-green, .menu .nav-logo {
+  .menu .letter-green,
+  .menu .nav-logo {
     float: left; } }
+
+@media screen and (min-width: 1024px) {
+  .menu a:hover {
+    color: #222222;
+    transition: .3s; }
+  .nav-logo a:hover {
+    color: #7cc576;
+    transition: .5s; }
+  .btn:hover {
+    color: #7cc576;
+    background-color: white;
+    transition: .5s; }
+  .btn-details:hover {
+    transition: 0.5s;
+    color: lightgreen; }
+  .footer-item a:hover {
+    color: #777777; }
+  .facebook-blue:hover {
+    background-color: #3b5998; }
+  .twitter-blue:hover {
+    background-color: #4099ff; }
+  .pinterest-red:hover {
+    background-color: #c92228; }
+  .gplus-red:hover {
+    background-color: #D34836; } }
 
 @media screen and (min-width: 1440px) {
   .portfolio {
     background: url(images/bg-tablet-right.png) right center no-repeat; }
-    .portfolio h4, .portfolio .portfolio-row .portfolio-row-h4, .portfolio-row .portfolio .portfolio-row-h4, .portfolio .footer-item .footer-item-h4, .footer-item .portfolio .footer-item-h4, .portfolio p, .portfolio button, .portfolio .portfolio-row h3, .portfolio .portfolio-row .home .home-h3, .home .portfolio .portfolio-row .home-h3, .portfolio .portfolio-row .blog .blog-h3, .blog .portfolio .portfolio-row .blog-h3, .portfolio .portfolio-row .portfolio-h3, .portfolio .portfolio-row .portfolio-row-h3, .portfolio .portfolio-row .client .client-h3, .client .portfolio .portfolio-row .client-h3 {
+    .portfolio h4, .portfolio .portfolio-row .portfolio-row-h4, .portfolio-row .portfolio .portfolio-row-h4, .portfolio .footer-item .footer-item-h4, .footer-item .portfolio .footer-item-h4,
+    .portfolio p,
+    .portfolio button,
+    .portfolio .portfolio-row h3,
+    .portfolio .portfolio-row .home .home-h3, .home
+    .portfolio .portfolio-row .home-h3,
+    .portfolio .portfolio-row .blog .blog-h3, .blog
+    .portfolio .portfolio-row .blog-h3, .portfolio .portfolio-row .portfolio-h3,
+    .portfolio .portfolio-row .portfolio-row-h3,
+    .portfolio .portfolio-row .client .client-h3, .client
+    .portfolio .portfolio-row .client-h3 {
       text-align: left; } }
