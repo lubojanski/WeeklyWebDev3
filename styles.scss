@@ -173,11 +173,10 @@ p {
         position: relative;
     }
     .home-h1 {
-        @extend h1;
         z-index: 1;
         position: relative;
     }
-    .home-h3 {
+    .home-h2 {
         @extend h3;
         z-index: 1;
         position: relative;
@@ -211,6 +210,12 @@ p {
     .container-item {
         width: 244px;
     }
+    .about-h1{
+        @extend h2;
+    }
+        .about-h2{
+        @extend h3;
+    }
 }
 
 .container {
@@ -229,21 +234,24 @@ p {
     margin: 20px;
     padding-bottom: 30px;
 }
+.container-item-h1{
+    @extend h4;
+}
 
 .blog {
     display: flex;
-    .blog-h2 {
+    .blog-h1 {
         @extend h2;
         position: relative;
         font-size: 1.3em;
         color: #ffffff;
         line-height: 150%;
         padding-bottom: 45px;
-        //margin-left: 100px;
+        margin-left: 0px;
         text-align: left;
         z-index: 1;
     }
-    .blog-h3 {
+    .blog-h2 {
         @extend h3;
         position: relative;
         padding-top: 0px;
@@ -313,7 +321,10 @@ p {
 }
 
 .portfolio {
-    .portfolio-h3 {
+    .portfolio-h1{
+        @extend h2;
+    }
+    .portfolio-h2 {
         @extend h3;
         font-size: 1.15em;
         padding-top: 0px;
@@ -340,11 +351,11 @@ p {
     height: 160px;
     margin-bottom: 20px;
     margin-top: 20px;
-    .portfolio-row-h4 {
+    .portfolio-row-h1 {
         @extend h4;
         padding: 9px 0 9px 0;
     }
-    .portfolio-row-h3 {
+    .portfolio-row-h2 {
         @extend h3;
         padding: 0;
     }
@@ -360,10 +371,20 @@ p {
         border-radius: 100%;
         border-color: $darkgray;
     }
+    .culture-h1{
+        @extend h2;
+    }
+        .culture-h2{
+        @extend h3;
+    }
 }
 
 .client {
-    .client-h3 {
+    .client-h1 {
+        @extend h2;
+        padding-top: 1em;
+    }
+    .client-h2 {
         @extend h3;
         padding-top: 1em;
     }
@@ -382,11 +403,15 @@ p {
 
 .client-item {
     background-color: $lightgray;
-    p {
+    blockquote {
         padding: 0px 0 0 10px;
         text-align: left;
         line-height: 200%;
         text-indent: -1em;
+        text-transform: none;
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.78em;
+        color: $darkgray;
     }
 }
 
@@ -429,7 +454,7 @@ p {
     width: 100%;
     background: $green;
     color: white;
-    .contact-h2 {
+    .contact-h1 {
         @extend h2;
         padding-top: 1em;
     }
@@ -464,16 +489,15 @@ p {
 
 .footer-item {
     margin: 25px;
-    .footer-item-h4 {
+    .footer-item-h1 {
         @extend h4;
         color: inherit;
         text-align: left;
         margin-bottom: 20px;
         padding-top: 0;
+        width: initial;
     }
-}
-
-.footer-item-row {
+    .footer-item-row {
     display: block;
     text-transform: none;
     min-height: 35px;
@@ -481,14 +505,13 @@ p {
     font: 400 (11/14)*1em 'Roboto Slab', serif;
     margin: auto;
     text-align: left;
-    background: url(images/icon-check.png) left no-repeat;
 }
-
-.footer-item a {
+a {
     text-decoration: none;
     font: 400 14px 'Roboto Slab', serif;
     color: #ececec;
     text-transform: none;
+}
 }
 
 .hashtag {
@@ -617,6 +640,10 @@ p {
         img {
             padding-right: 20px;
         }
+        .portfolio-row-h2, .portfolio-row-h1 {
+            text-align: left;
+            margin: 0;
+        }
     }
 }
 
@@ -694,7 +721,7 @@ p {
         }
     }
     .blog .right-column {
-        .blog-h2 {
+        .blog-h1 {
             font-size: 2em;
         }
     }
@@ -763,9 +790,9 @@ p {
         background: url(images/bg-tablet-right.png) right center no-repeat;
         h4,
         p,
-        button,
-        .portfolio-row h3 {
+        button{
             text-align: left;
         }
+
     }
 }
