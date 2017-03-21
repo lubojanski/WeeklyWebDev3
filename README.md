@@ -3,4 +3,4 @@
 psd -> html/css/js
 
 
-DEMO:  https://woateng.github.io/WeeklyWebDev3/
+DEMO:  https://lubojanski.github.io/WeeklyWebDev3/
